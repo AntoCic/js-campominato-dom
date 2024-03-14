@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+:root {
+  --n_col: 10;
+}
+
+/*************************************************
+      RESET
+   *************************************************/
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/************************************************
+      UTILITIES
+   ************************************************/
+.d-contents {
+  display: contents;
+}
+
+/* COMPONENTS */
+
+/* _______________________________________________ */
+/* btn 1 */
+
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 100px;
+}
+
+/* MAIN */
+.field {
+  background-color: #7fffd4;
+}
+#field_box {
+  border: 1px solid black;
+  width: calc(100vmin - 170px);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.btn-square {
+  width: calc(100% / var(--n_col));
+  max-width: calc(100% / var(--n_col));
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+.btn-square:hover {
+  color: #bbbbbb;
+  border: 1px solid #bbbbbb;
+}
+
+.ms_modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.ms_modal-box {
+  border-radius: 1em;
+  border: 2px solid rgba(158, 21, 21, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.ms_modal-box h1 {
+  font-family: "Black Ops One", system-ui;
+}
+.ms_modal-box p {
+  font-weight: bolder;
+}
+
+
+/* FOOTER */
+footer {
+  height: 70px;
+}
+
+/*************************************************
+    MEDIA RESPONSIVE
+ *************************************************/
+/* breakpoints Medium*/
+@media (min-width: 768px) {
+}
+/* breakpoints Large*/
+@media (min-width: 992px) {
+}
+
+/*************************************************
+    DEBUG
+ *************************************************/
+.debug :is(header, main, footer) {
+  border: 2px solid rgb(0, 250, 0);
+}
+
+.debug .container {
+  border: 1px dashed rgba(250, 0, 0, 0.3);
+}
+
+.debug .row {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.debug [class^="col"] {
+  background-color: #daa52062;
+}
